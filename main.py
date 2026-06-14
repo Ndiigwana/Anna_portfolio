@@ -632,7 +632,9 @@ def github_body():
                     padding=20,
                     shape=ft.RoundedRectangleBorder(radius=8),
                 ),
-                url="https://github.com/Ndiigwana/Anna_portfolio",
+                on_click=lambda e: e.page.launch_url(
+                    "https://github.com/silverna-creator/UNAM-I3691CP-buildtech-innovators-EM-lab.git"
+                ),
             ),
             padding=ft.Padding(left=40, right=40),
         ),
