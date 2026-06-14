@@ -134,9 +134,10 @@ def build_top_nav(page: ft.Page, active_key: str):
                 ft.TextButton(
                     content=ft.Row([
                         ft.Image(
-                            src="unam_logo.png",
+                            src="anna.jpeg",
                             width=70, height=70,
-                            fit=ft.BoxFit.CONTAIN,
+                            fit=ft.BoxFit.COVER,
+                            border_radius=14,
                             error_content=ft.Text(
                                 "UNAM", size=22,
                                 weight=ft.FontWeight.BOLD,
@@ -631,7 +632,7 @@ def github_body():
                     padding=20,
                     shape=ft.RoundedRectangleBorder(radius=8),
                 ),
-                url="https://github.com/",
+                url="https://github.com/Ndiigwana/Anna_portfolio",
             ),
             padding=ft.Padding(left=40, right=40),
         ),
@@ -839,7 +840,9 @@ def demos_body():
                                         shape=ft.RoundedRectangleBorder(radius=8),
                                         padding=ft.Padding.symmetric(horizontal=20, vertical=12)
                                     ),
-                                    on_click=lambda e: subprocess.Popen(["start", "https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN"], shell=True),
+                                    on_click=lambda e: e.page.launch_url(
+                                        "https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN"
+                                    ),
                                 ),
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
@@ -850,7 +853,7 @@ def demos_body():
                         ft.Container(
                             content=(
                                 ft.Video(
-                                    src="assets/contribution_video.mp4",
+                                    src="contribution_video.mp4",
                                     width=520,
                                     height=260,
                                     autoplay=False,
@@ -1101,7 +1104,7 @@ def contact_body(page: ft.Page):
 # ══════════════════════════════════════════════════════════════════════════════
 def main(page: ft.Page):
     page.title = "Web Portfolio - Anna NN Kambala"
-    page.assets_dir = "."
+    page.assets_dir = "assets"
     page.padding = 0
     page.scroll = "none"
     page.bgcolor = BG_COLOR
@@ -1130,7 +1133,7 @@ def main(page: ft.Page):
 
 ft.app(
     target=main,
-    assets_dir=".",
+    assets_dir="assets",
     host="0.0.0.0",
     port=int(os.environ.get("PORT", 8000)),
     view=ft.AppView.WEB_BROWSER,
