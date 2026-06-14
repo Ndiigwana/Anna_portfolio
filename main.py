@@ -134,7 +134,7 @@ def build_top_nav(page: ft.Page, active_key: str):
                 ft.TextButton(
                     content=ft.Row([
                         ft.Image(
-                            src="anna.jpeg",
+                            src="unam_logo.png",
                             width=70, height=70,
                             fit=ft.BoxFit.COVER,
                             border_radius=14,
@@ -842,9 +842,7 @@ def demos_body():
                                         shape=ft.RoundedRectangleBorder(radius=8),
                                         padding=ft.Padding.symmetric(horizontal=20, vertical=12)
                                     ),
-                                    on_click=lambda e: e.page.launch_url(
-                                        "https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN"
-                                    ),
+                                    url="https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN",
                                 ),
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
@@ -875,9 +873,7 @@ def demos_body():
                                         ft.ElevatedButton(
                                             "Watch project video externally",
                                             icon=ft.Icons.PLAY_ARROW_ROUNDED,
-                                            on_click=lambda e: e.page.launch_url(
-                                                "https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN"
-                                            ),
+                                            url="https://unam164-my.sharepoint.com/:v:/g/personal/225150395_students_unam_na/IQC2PeHPz71KSKjtKo-hXlPGAb7Nvv_1nL_Y023tTGVc0dA?e=0odVyN",
                                         ),
                                     ],
                                     alignment=ft.MainAxisAlignment.CENTER,
