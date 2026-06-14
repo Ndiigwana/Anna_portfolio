@@ -133,15 +133,19 @@ def build_top_nav(page: ft.Page, active_key: str):
                 # ── UNAM logo replacing text ──
                 ft.TextButton(
                     content=ft.Row([
-                        ft.Image(
-                            src="unam_logo.png",
-                            width=70, height=70,
-                            fit=ft.BoxFit.COVER,
-                            border_radius=14,
-                            error_content=ft.Text(
-                                "UNAM", size=22,
-                                weight=ft.FontWeight.BOLD,
-                                color=ACCENT_COLOR,
+                        ft.Container(
+                            padding=ft.Padding(6),
+                            bgcolor=ft.Colors.WHITE,
+                            border_radius=10,
+                            content=ft.Image(
+                                src="unam_logo.png",
+                                width=90, height=60,
+                                fit=ft.BoxFit.CONTAIN,
+                                error_content=ft.Text(
+                                    "UNAM", size=22,
+                                    weight=ft.FontWeight.BOLD,
+                                    color=ACCENT_COLOR,
+                                ),
                             ),
                         ),
                         ft.Column([
@@ -1029,14 +1033,14 @@ def contact_body(page: ft.Page):
                                     ft.Icon(ft.Icons.EMAIL, color=ACCENT_COLOR, size=18),
                                     ft.Text("Email: ", weight=ft.FontWeight.BOLD,
                                             color=TEXT_COLOR, size=15),
-                                    ft.Text("anna.kambala@example.com",
+                                    ft.Text("annakambala07@gmail.com",
                                             color=SUBTLE_COLOR, size=15),
                                 ], spacing=5),
                                 ft.Row([
                                     ft.Icon(ft.Icons.PHONE, color=ACCENT_COLOR, size=18),
                                     ft.Text("Cell: ", weight=ft.FontWeight.BOLD,
                                             color=TEXT_COLOR, size=15),
-                                    ft.Text("+264 81 000 0000",
+                                    ft.Text("08139944745",
                                             color=SUBTLE_COLOR, size=15),
                                 ], spacing=5),
                                 ft.Row([
@@ -1066,7 +1070,7 @@ def contact_body(page: ft.Page):
                                                          color=ft.Colors.WHITE),
                                     width=float("inf"),
                                     on_click=lambda _: page.launch_url(
-                                        f"mailto:anna.kambala@example.com"
+                                        f"mailto:annakambala07@gmail.com"
                                         f"?subject=Message from {name_field.value}"
                                         f"&body=From: {email_field.value}"
                                         f"%0D%0A%0D%0A{msg_field.value}"
